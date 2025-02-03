@@ -128,7 +128,7 @@ def genice(A, N):
     N = int(N)
     l = N // 4
     ll = N // 4
-    lll = N // 5
+    lll = N // 4
     cnt = 1
     for i in range(n):
         for j in range(i + 1, n):

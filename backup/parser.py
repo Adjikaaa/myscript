@@ -1,5 +1,5 @@
 
-k = 17
+k = 11
 
 f = open("keys.log", "r")
 
