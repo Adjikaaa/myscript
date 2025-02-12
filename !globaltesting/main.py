@@ -31,7 +31,7 @@ for l in range(loops):
         sys.stdout.write(f"Process returned errcode: {complete.returncode}")
 os.remove(f"{dirname}/zchaff1000")
 
-finalfile = subprocess.run(["python3", "finalfile.py", N, loop], capture_output = False, text = True)
+finalfile = subprocess.run(["python3", "finalfile.py", N], capture_output = False, text = True)
 
 
 
