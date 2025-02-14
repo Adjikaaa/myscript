@@ -26,39 +26,11 @@ def parserr(N, loop):
         sys.stdout.write(f'{len(res)} for {N}_{loop}.cnf\n')
         for i in range(len(res)):
             sys.stdout.write(f'{res[i]}\n')   
-#блок поиска инверсных пар            
-        cntinv = 0
-        invers = []
-        for i in range(len(res)):
-            temp = [-x for x in res[i]] 
-            for j in range(len(res)):
-                if res[i] not in invers and res[j] == temp:
-                    invers.append(res[i])
-                    invers.append(temp)
-                    cntinv += 1
-#        sys.stdout.write(f'Количество инверсных пар(4): {cntinv}\n')
-#        print(*invers, sep = '\n')
-
-        for i in range(len(res)):    
-            cnti = 0
-            for j in range(len(res[i])):
-                cntj = 0
-                indexes = []
-                for i in range(len(res) - 1):
-                    if res[i][j] == res[i + 1][j]:
-                        cntj += 1
-                        indexes.append(j)
-                if cntj == len(res):
-                    cnti += 1
-            if cnti > 2:
-                pass
-            else:
-                pass
 
     else:
         os.remove(f'{N + "_" + loop}.cnf') 
     f.close()
- 
+
         
     os.remove(f'keys_{N + "_" + loop}.log') 
     os.chdir(homedir)
