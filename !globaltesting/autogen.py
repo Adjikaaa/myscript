@@ -1,5 +1,6 @@
 import secrets as rnd
-import argparse, subprocess, sys, os, pathlib
+import argparse
+import pathlib
 
 def printcnf(F, N, l):
     n = 3*int(N) // 2 + 2
