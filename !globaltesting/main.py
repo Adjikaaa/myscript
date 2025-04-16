@@ -18,11 +18,11 @@ for l in range(loops):
         if satsearch.returncode == 0:
             sys.stdout.write("\n")
             if os.path.isfile('keys.log'):
-                print("Файл существует")
+#                print("Файл существует")
                 os.chdir(homedir)
                 parsing = subprocess.run(["python3", "parser.py", N, loop], capture_output = False, text = True)
             else:
-                print("Файл не существует, cnf-файл удалён")
+#                print("Файл не существует, cnf-файл удалён")
                 os.remove(f'{N + "_" + loop}.cnf') 
                 os.chdir(homedir)
         else:
